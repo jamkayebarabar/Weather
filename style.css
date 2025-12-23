@@ -1,0 +1,112 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --sub: #64748b;
+  --accent: #3b82f6;
+}
+
+[data-theme="dark"] {
+  --bg: #020617;
+  --card: #020617;
+  --text: #e5e7eb;
+  --sub: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.header {
+  padding: 1rem;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controls input {
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+}
+
+.controls button {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.temp-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.temp-row span {
+  font-size: 3rem;
+}
+
+.details {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--sub);
+}
+
+.hourly {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.hour-card {
+  min-width: 80px;
+  text-align: center;
+}
+
+.daily {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+  gap: 1rem;
+}
+
+.daily-card {
+  text-align: center;
+}

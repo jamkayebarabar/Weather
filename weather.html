@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>🌦 Weather</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Search city..." />
+    <button id="searchBtn">🔍</button>
+    <button id="locationBtn">📍</button>
+    <button id="unitBtn">°C</button>
+    <button id="themeBtn">🌙</button>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Current Weather -->
+  <section id="current" class="card hidden">
+    <h2 id="city"></h2>
+    <p id="description"></p>
+
+    <div class="temp-row">
+      <img id="icon" />
+      <span id="temp"></span>
+    </div>
+
+    <div class="details">
+      <span id="feels"></span>
+      <span id="humidity"></span>
+      <span id="wind"></span>
+    </div>
+  </section>
+
+  <!-- Hourly Forecast -->
+  <section class="card hidden" id="hourlySection">
+    <h3>Hourly Forecast</h3>
+    <div id="hourly" class="hourly"></div>
+  </section>
+
+  <!-- Daily Forecast -->
+  <section class="card hidden" id="dailySection">
+    <h3>5-Day Forecast</h3>
+    <div id="daily" class="daily"></div>
+  </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
